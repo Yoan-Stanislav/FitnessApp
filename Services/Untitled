@@ -1,0 +1,8 @@
+namespace FitnessApp
+{
+    public static class ApiConfig
+    {
+        // Тук е истинският ти ключ. Той остава само на твоя лаптоп.
+        public const string OpenAiApiKey = "sk-proj-Ys6naZHdrgwO8vHfiiam7NSIDFFgAd..."; 
+    }
+}
