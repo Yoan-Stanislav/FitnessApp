@@ -7,6 +7,8 @@ using FitnessApp.Models;
 using FitnessApp.Services;
 using Microsoft.Maui.ApplicationModel;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Devices;
+
 
 
 namespace FitnessApp.ViewModels;
@@ -279,12 +281,15 @@ private void CompleteRest()
     _isResting = false;
     OnPropertyChanged(nameof(IsResting));
     
-    if (Vibration.Default.IsSupported)
+    try
     {
-        Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(500));
+        Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(1000)); // 1 секунда вибрация
     }
-
-    _currentIndex++;
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Vibration error: {ex.Message}");
+    }
+	_currentIndex++;
     
     if (_currentIndex < Exercises.Count)
     {
@@ -297,6 +302,10 @@ private void CompleteRest()
         _exerciseStartTime = DateTime.Now; 
         OnPropertyChanged(nameof(Exercises));
         OnPropertyChanged(nameof(CurrentIndex));
+    }
+	else
+    {
+        CompleteWorkout();
     }
 }
 
@@ -365,6 +374,13 @@ private void CompleteRest()
 		_isResting = false;
 		_currentIndex = -1;
 		_totalWorkoutDuration = TimeSpan.Zero;
+
+		try
+        {
+            Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(1500));
+        }
+        catch { }
+        
 		
 		// Reset all exercises
 		foreach (var exercise in Exercises)

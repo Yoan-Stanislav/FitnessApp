@@ -12,10 +12,6 @@
 		<data>
 		atuV94l3qfnZWBuuSz38+Owxsuw=
 		</data>
-		<key>Resources/MauiInfo.plist</key>
-		<data>
-		iEtuUGCV6JM3gxS/pO33swhmpp8=
-		</data>
 		<key>Resources/MonoTouchDebugConfiguration.txt</key>
 		<data>
 		oowkf1sL6T19nanXUObgmuayWqM=
@@ -62,14 +58,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			imWpGNOXa4hMSTL5bKaa6VE0yyV7w6widl6W9UbA6a0=
+			rkcH5TzGHHkNw2wJLYekwoz9tuVoxZEIblYTzHuacZs=
 			</data>
 		</dict>
 		<key>MonoBundle/FitnessApp.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RdujZUmgI0BOpuyf4FgzICQlKeBRGbzl33kiNjxkZvs=
+			lnWwXX7vdtAgHD+td2HxMPrIdrNN4UWF9EItULIC8zA=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.CSharp.dll</key>
@@ -1743,13 +1739,6 @@
 			<key>hash2</key>
 			<data>
 			gnarQQN/mHRs7vK+KqwKmXi0oZCzOZMSHzXyJ6Fcq7s=
-			</data>
-		</dict>
-		<key>Resources/MauiInfo.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tx0KXqEC+DvcCGyogQTEQWHcCWJYYqH24NtPwhpQEjo=
 			</data>
 		</dict>
 		<key>Resources/MonoTouchDebugConfiguration.txt</key>

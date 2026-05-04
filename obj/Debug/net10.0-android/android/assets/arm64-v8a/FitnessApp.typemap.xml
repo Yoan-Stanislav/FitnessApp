@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="FitnessApp" mvid="64a82d1b9d8d461b90bd2f8f9954d266">
+<api type="debug" assembly-name="FitnessApp" mvid="02711c8111af4c90a0513e5a13feb833">
   <java-to-managed>
     <entry java-name="crc64d91c025d4d93311b/MainActivity" managed-name="FitnessApp.MainActivity, FitnessApp" managed-type-token-id="33554441" />
     <entry java-name="crc64d91c025d4d93311b/MainApplication" managed-name="FitnessApp.MainApplication, FitnessApp" managed-type-token-id="33554442" />
