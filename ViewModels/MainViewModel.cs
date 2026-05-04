@@ -272,12 +272,14 @@ public partial class MainViewModel : INotifyPropertyChanged
     }
 
     [RelayCommand]
-    private void DeleteWorkout(Workout workout)
-    {
-        if (workout is null)
-            return;
+    private async Task DeleteWorkout(Workout workout)
+    { 
+    if (workout is null)
+        return;
 
-        MainThread.BeginInvokeOnMainThread(() => Workouts.Remove(workout));
+    await _databaseService.DeleteWorkoutAsync(workout); 
+
+    MainThread.BeginInvokeOnMainThread(() => Workouts.Remove(workout));
     }
 
     [RelayCommand]

@@ -77,4 +77,17 @@ public class DatabaseService
 		var db = await GetConnectionAsync();
 		return await db.UpdateAsync(workout);
 	}
+	public async Task<int> DeleteWorkoutAsync(Workout workout)
+    {
+        var db = await GetConnectionAsync();
+        
+        var exercisesToDelete = await db.Table<Exercise>().Where(e => e.WorkoutId == workout.Id).ToListAsync();
+        foreach (var exercise in exercisesToDelete)
+        {
+            await db.DeleteAsync(exercise);
+        }
+
+        // триемсамата тренировка
+        return await db.DeleteAsync(workout);
+    }
 }

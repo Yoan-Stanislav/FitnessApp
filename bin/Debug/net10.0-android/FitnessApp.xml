@@ -15,7 +15,7 @@
             <summary>The backing field for <see cref="P:FitnessApp.ViewModels.MainViewModel.DeleteWorkoutCommand"/>.</summary>
         </member>
         <member name="P:FitnessApp.ViewModels.MainViewModel.DeleteWorkoutCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FitnessApp.ViewModels.MainViewModel.DeleteWorkout(FitnessApp.Models.Workout)"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:FitnessApp.ViewModels.MainViewModel.DeleteWorkout(FitnessApp.Models.Workout)"/>.</summary>
         </member>
         <member name="F:FitnessApp.ViewModels.MainViewModel.workoutTappedCommand">
             <summary>The backing field for <see cref="P:FitnessApp.ViewModels.MainViewModel.WorkoutTappedCommand"/>.</summary>
