@@ -45,6 +45,7 @@ public partial class MainViewModel : INotifyPropertyChanged
         """;
 
     private bool _isAiBusy;
+    private bool _isNavigating;
 
     private Workout? _selectedWorkout;
 
@@ -293,10 +294,14 @@ public partial class MainViewModel : INotifyPropertyChanged
 
     [RelayCommand]
     private async Task WorkoutTapped(Workout workout)
-    {
-        if (workout is null)
-            return;
+{
+    if (workout is null || _isNavigating)
+        return;
 
+    _isNavigating = true; 
+
+    try
+    {
         var page = ResolveAlertPage();
         if (page is null)
             return;
@@ -306,6 +311,16 @@ public partial class MainViewModel : INotifyPropertyChanged
             await page.Navigation.PushAsync(new WorkoutDetailsPage(workout, _databaseService));
         });
     }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Navigation error: {ex.Message}");
+    }
+    finally
+    {
+        await Task.Delay(500);
+        _isNavigating = false;
+    }
+}
 
     public event PropertyChangedEventHandler? PropertyChanged;
     private void OnPropertyChanged([CallerMemberName] string? propertyName = null) =>

@@ -283,7 +283,7 @@ private void CompleteRest()
     
     try
     {
-        Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(1000)); // 1 секунда вибрация
+        Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(500)); 
     }
     catch (Exception ex)
     {
@@ -377,7 +377,7 @@ private void CompleteRest()
 
 		try
         {
-            Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(1500));
+            Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(500));
         }
         catch { }
         

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FitnessApp</name>
+    </assembly>
+    <members>
+        <member name="T:FitnessApp.ViewModels.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FitnessApp.ViewModels.MainViewModel.SelectedWorkout">
+            <summary>Bound to the CollectionView selected row (single selection).</summary>
+        </member>
+        <member name="F:FitnessApp.ViewModels.MainViewModel.deleteWorkoutCommand">
+            <summary>The backing field for <see cref="P:FitnessApp.ViewModels.MainViewModel.DeleteWorkoutCommand"/>.</summary>
+        </member>
+        <member name="P:FitnessApp.ViewModels.MainViewModel.DeleteWorkoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:FitnessApp.ViewModels.MainViewModel.DeleteWorkout(FitnessApp.Models.Workout)"/>.</summary>
+        </member>
+        <member name="F:FitnessApp.ViewModels.MainViewModel.workoutTappedCommand">
+            <summary>The backing field for <see cref="P:FitnessApp.ViewModels.MainViewModel.WorkoutTappedCommand"/>.</summary>
+        </member>
+        <member name="P:FitnessApp.ViewModels.MainViewModel.WorkoutTappedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:FitnessApp.ViewModels.MainViewModel.WorkoutTapped(FitnessApp.Models.Workout)"/>.</summary>
+        </member>
+        <member name="T:FitnessApp.ViewModels.WorkoutDetailsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:FitnessApp.ViewModels.WorkoutDetailsViewModel.deleteExerciseCommand">
+            <summary>The backing field for <see cref="P:FitnessApp.ViewModels.WorkoutDetailsViewModel.DeleteExerciseCommand"/>.</summary>
+        </member>
+        <member name="P:FitnessApp.ViewModels.WorkoutDetailsViewModel.DeleteExerciseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:FitnessApp.ViewModels.WorkoutDetailsViewModel.DeleteExercise(FitnessApp.Models.Exercise)"/>.</summary>
+        </member>
+        <member name="F:FitnessApp.ViewModels.WorkoutDetailsViewModel.autoSaveExerciseNotesCommand">
+            <summary>The backing field for <see cref="P:FitnessApp.ViewModels.WorkoutDetailsViewModel.AutoSaveExerciseNotesCommand"/>.</summary>
+        </member>
+        <member name="P:FitnessApp.ViewModels.WorkoutDetailsViewModel.AutoSaveExerciseNotesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:FitnessApp.ViewModels.WorkoutDetailsViewModel.AutoSaveExerciseNotes(FitnessApp.Models.Exercise)"/>.</summary>
+        </member>
+        <member name="T:FitnessApp.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+    </members>
+</doc>
