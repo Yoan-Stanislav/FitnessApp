@@ -23,17 +23,25 @@ public partial class MainViewModel : INotifyPropertyChanged
     private static readonly string AiPrompt =
         """
         Генерирай тренировката и упражненията изцяло на български език.
-        Върни САМО валиден JSON в следния формат:
+        Върни САМО валиден JSON в следния формат (стойностите са само примерни):
         {
           "title": "кратко име на тренировка",
           "exercises": [
-            { "name": "име на упражнение", "sets": 3, "reps": 10, "restTimeInSeconds": 15 }
+            { 
+              "name": "име на упражнение", 
+              "sets": 3, 
+              "reps": 10, 
+              "restTimeInSeconds": 30,
+              "notes": "Кратък съвет за правилно изпълнение или дишане (до 2 изречения)." 
+            }
           ]
         }
         Изисквания:
         - exercises трябва да съдържа между 6 и 8 упражнения.
+        - Генерирай РАЗЛИЧНИ и реалистични стойности за sets (от 2 до 4), reps (от 8 до 15) и restTimeInSeconds (между 15 и 60), които са подходящи за конкретното упражнение.
+        - Полето "notes" трябва да съдържа кратки и полезни инструкции за изпълнението на конкретното упражнение.
         - Всички имена и текстове да са само на български.
-        - Без markdown, без обяснения, без допълнителен текст.
+        - Без markdown, без обяснения, без допълнителен текст, САМО чист JSON.
         """;
 
     private bool _isAiBusy;
@@ -249,7 +257,8 @@ public partial class MainViewModel : INotifyPropertyChanged
                 Sets = item.Sets.GetValueOrDefault(3) > 0 ? item.Sets!.Value : 3,
                 Reps = item.Reps.GetValueOrDefault(10) > 0 ? item.Reps!.Value : 10,
                 RestTimeInSeconds = item.RestTimeInSeconds.GetValueOrDefault(60) > 0 ? item.RestTimeInSeconds!.Value : 60,
-                SequenceNumber = i + 1
+                SequenceNumber = i + 1,
+                Notes = item.Notes ?? string.Empty,
             });
         }
 
@@ -314,5 +323,6 @@ public partial class MainViewModel : INotifyPropertyChanged
         public int? Sets { get; set; }
         public int? Reps { get; set; }
         public int? RestTimeInSeconds { get; set; }
+        public string? Notes { get; set; }
     }
 }
